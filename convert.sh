@@ -1,2 +1,4 @@
 #!/bin/sh
-iconv -f UTF-8 -t SHIFT-JIS input.txt > output.txt
+cp shift-jis.py shift-jis.py.original
+iconv -f SHIFT-JIS -t UTF-8 shift-jis.py > shift-jis.py.tmp
+mv shift-jis.py.tmp shift-jis.py
